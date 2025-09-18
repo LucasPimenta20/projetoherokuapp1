@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test"
-  },
+    "test": "npx playwright test",
+    "test:herokuapp": "playwright test --project=herokuapp"
+     },
   "author": "Lucas",
   "license": "ISC",
   "devDependencies": {
