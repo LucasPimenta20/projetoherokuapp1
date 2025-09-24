@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-//Teste pagina "Redirect Link"
+// Testing page "Redirect Link"
 test('Redirect Link - Clicar em "here"', async ({ page }) => {
   await page.goto('https://the-internet.herokuapp.com/'); 
   await page.click('text=Redirect Link');
@@ -8,7 +8,7 @@ test('Redirect Link - Clicar em "here"', async ({ page }) => {
   await expect(page).toHaveURL(/status_codes/);
 });
 
-//Teste página 200
+// Testing page 200
 test('Redirect Link - Verificar status 200', async ({ page }) => {
   await page.goto('https://the-internet.herokuapp.com/redirector');
   await page.click('text=here');
@@ -16,7 +16,7 @@ test('Redirect Link - Verificar status 200', async ({ page }) => {
   await expect(page.locator('p')).toHaveText(/This page returned a 200 status code/);
 });
 
-//Teste página 301
+// Testing page 301
 test('Redirect Link - Verificar status 301', async ({ page }) => {
   await page.goto('https://the-internet.herokuapp.com/redirector');
   await page.click('text=here');
@@ -24,7 +24,7 @@ test('Redirect Link - Verificar status 301', async ({ page }) => {
   await expect(page.locator('p')).toHaveText(/This page returned a 301 status code/);
 });
 
-//Teste página 404
+//  Testing page 404
 test('Redirect Link - Verificar status 404', async ({ page }) => {
   await page.goto('https://the-internet.herokuapp.com/redirector');
   await page.click('text=here');
