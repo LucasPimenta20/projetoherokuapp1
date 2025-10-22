@@ -7,7 +7,7 @@ test('should display only contacts that match the search term', async ({ page })
   await page.fill('#password', 'test123');
   await page.click('#submit');
 
-  // Wait for the contact list page to load
+  // Wait for the contact list page 
   await page.waitForURL('**/contactList', { timeout: 15000 });
   await expect(page.locator('#add-contact')).toBeVisible();
 
