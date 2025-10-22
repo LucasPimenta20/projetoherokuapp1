@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('should display only contacts that match the search term', async ({ page }) => {
-  // Go to login page and log in with valid credentials
+  // Access page and go to login page and log in with valid credentials
   await page.goto('https://thinking-tester-contact-list.herokuapp.com/');
   await page.fill('#email', 'lucas20@gmail.com');
   await page.fill('#password', 'test123');
