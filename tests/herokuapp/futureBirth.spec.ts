@@ -40,6 +40,6 @@ test('login and add a new contact with valid data', async ({ page }) => {
   const errorMessage = page.locator('.error, .errorMessage, #error, text=Invalid Date of Birth');
   await expect(errorMessage.first()).toBeVisible();
 
-  // log confirmation in console
+  // Log confirmation in console
   console.log('Date of Birth is invalid');
 });
