@@ -36,5 +36,10 @@ test('login and add a new contact with valid data', async ({ page }) => {
   // Submit form
   await page.click('#submit');
 
-  console.log('Contact validation failed: phone: Phone number is invalid');
+  // Expect an error message or validation alert to appear
+  const errorMessage = page.locator('.error, .errorMessage, #error, text=Invalid email');
+  await expect(errorMessage.first()).toBeVisible();
+
+  // log confirmation in console
+  console.log('Email is invalid');
 });
