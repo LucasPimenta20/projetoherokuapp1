@@ -6,8 +6,8 @@ test('login and add a new contact with valid data', async ({ page }) => {
 
   // Log in with valid credentials
   await page.waitForSelector('#email');
-  await page.fill('#email', 'lucas20@gmail.com'); // your valid email
-  await page.fill('#password', 'test123'); // your valid password
+  await page.fill('#email', 'lucas20@gmail.com');
+  await page.fill('#password', 'test123'); 
   await page.click('#submit');
 
   // Wait until Contact List page loads
