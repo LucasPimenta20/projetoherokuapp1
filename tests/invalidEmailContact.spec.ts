@@ -40,6 +40,6 @@ test('login and add a new contact with valid data', async ({ page }) => {
   const errorMessage = page.locator('.error, .errorMessage, #error, text=Invalid email');
   await expect(errorMessage.first()).toBeVisible();
 
-  // Optional: log confirmation in console
+  // log confirmation in console
   console.log('Email is invalid');
 });
