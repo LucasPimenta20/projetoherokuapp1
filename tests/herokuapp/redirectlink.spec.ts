@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 // Testing page "Redirect Link"
-test('Redirect Link - Clicar em "here"', async ({ page }) => {
+test('Redirect Link - Click in "here"', async ({ page }) => {
   await page.goto('https://the-internet.herokuapp.com/'); 
   await page.click('text=Redirect Link');
   await page.click('text=here');
@@ -32,7 +32,7 @@ test('Redirect Link - Verificar status 404', async ({ page }) => {
   await expect(page.locator('p')).toHaveText(/This page returned a 404 status code/);
 });
 
-//Teste página 500
+// Teste página 500
 test('Redirect Link - Verificar status 500', async ({ page }) => {
   await page.goto('https://the-internet.herokuapp.com/redirector');
   await page.click('text=here');

@@ -17,7 +17,5 @@ test('sign up with invalid email format should show error message', async ({ pag
   await page.click('#submit');
 
   // Wait and check for error message
-  const errorMessage = page.locator('#error');
-  await expect(errorMessage).toBeVisible();
-  await expect(errorMessage).toHaveText(/Email is invalid/i);
+  await expect(page.getByText('User validation failed: email')).toBeVisible();
 });

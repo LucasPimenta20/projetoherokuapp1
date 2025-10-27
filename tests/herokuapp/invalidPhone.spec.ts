@@ -25,7 +25,7 @@ test('login and add a new contact with valid data', async ({ page }) => {
   await page.fill('#lastName', 'Doe');
   await page.fill('#birthdate', '1990-05-15');
   await page.fill('#email', `john@gmail.com`); 
-  await page.fill('#phone', '55'); // Invalid phone number
+  await page.fill('#phone', '55'); 
   await page.fill('#street1', '123 Main Street');
   await page.fill('#street2', 'Apt 4B');
   await page.fill('#city', 'New York');

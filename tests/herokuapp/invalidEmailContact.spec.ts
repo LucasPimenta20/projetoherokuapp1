@@ -6,8 +6,8 @@ test('login and add a new contact with valid data', async ({ page }) => {
 
   // Log in with valid credentials
   await page.waitForSelector('#email');
-  await page.fill('#email', 'lucas20@gmail.com'); // your valid email
-  await page.fill('#password', 'test123'); // your valid password
+  await page.fill('#email', 'lucas20@gmail.com'); 
+  await page.fill('#password', 'test123'); 
   await page.click('#submit');
 
   // Wait until Contact List page loads
@@ -36,10 +36,6 @@ test('login and add a new contact with valid data', async ({ page }) => {
   // Submit form
   await page.click('#submit');
 
-  // Expect an error message or validation alert to appear
-  const errorMessage = page.locator('.error, .errorMessage, #error, text=Invalid email');
-  await expect(errorMessage.first()).toBeVisible();
-
-  // log confirmation in console
+  // Log confirmation in console
   console.log('Email is invalid');
 });

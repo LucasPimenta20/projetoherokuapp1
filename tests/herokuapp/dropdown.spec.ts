@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('Validar seleção no Dropdown', async ({ page }) => {
+test('Validate selection in Dropdown', async ({ page }) => {
 
   // Access the page
   await page.goto('https://the-internet.herokuapp.com/');

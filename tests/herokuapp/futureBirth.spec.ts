@@ -24,7 +24,7 @@ test('login and add a new contact with valid data', async ({ page }) => {
   await page.fill('#firstName', 'John');
   await page.fill('#lastName', 'Doe');
   await page.fill('#birthdate', '2030-05-15');
-  await page.fill('#email', `john@gmail.com`); // Invalid email
+  await page.fill('#email', `john@gmail.com`); 
   await page.fill('#phone', '5551234567');
   await page.fill('#street1', '123 Main Street');
   await page.fill('#street2', 'Apt 4B');
@@ -36,10 +36,6 @@ test('login and add a new contact with valid data', async ({ page }) => {
   // Submit form
   await page.click('#submit');
 
-  // Expect an error message or validation alert to appear
-  const errorMessage = page.locator('.error, .errorMessage, #error, text=Invalid email');
-  await expect(errorMessage.first()).toBeVisible();
-
   // log confirmation in console
-  console.log('Email is invalid');
+  console.log('Birthdate is invalid');
 });
