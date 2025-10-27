@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('Validar A/B Testing', async ({ page }) => {
+test('Validate A/B Testing', async ({ page }) => {
   // Access the page 
   await page.goto('https://the-internet.herokuapp.com/');
 

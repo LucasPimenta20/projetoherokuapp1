@@ -12,7 +12,7 @@ test('should view details of an existing contact', async ({ page }) => {
   // Wait until redirected to the contact list page
   await page.waitForURL('**/contactList');
 
-  // Click on the first contact in the list (assuming at least one exists)
+  // Click on the first contact in the list 
   const firstContact = page.locator('.contacts').first();
   await firstContact.click();
 

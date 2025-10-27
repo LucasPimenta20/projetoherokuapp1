@@ -12,13 +12,13 @@ test('login with valid credentials', async ({ page }) => {
   await page.fill('#email', 'lucas20@gmail.com'); 
   await page.fill('#password', 'test123'); 
 
-  // Clicar em "Submit"
+  // Click on "Submit"
   await page.click('#submit');
 
-  // Verificar redirecionamento para a lista de contatos
+  // Check redirection to contact list
   await page.waitForURL('**/contactList', { timeout: 10000 });
   await expect(page).toHaveURL(/.*contactList/);
 
-  // Validar que o título "Contact List" está visível
+  // Validate that the "Contact List" title is visible
   await expect(page.locator('h1')).toHaveText('Contact List');
 });

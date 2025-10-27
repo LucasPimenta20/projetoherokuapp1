@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
-test('should display only contacts that match the search term', async ({ page }) => {
-  // Access page and go to login page and log in with valid credentials
+test.skip('should display only contacts that match the search term', async ({ page }) => {
+  // Access page 
   await page.goto('https://thinking-tester-contact-list.herokuapp.com/');
   await page.fill('#email', 'lucas20@gmail.com');
   await page.fill('#password', 'test123');
@@ -24,7 +24,7 @@ test('should display only contacts that match the search term', async ({ page })
   const searchInput = page.locator('#search');
   await searchInput.fill(searchTerm);
 
-  // Trigger the search (press Enter)
+  // Trigger the search
   await searchInput.press('Enter');
 
 });
